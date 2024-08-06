@@ -11,6 +11,7 @@ int main (void) {
     const char* text = "Hello World";
     const float fontSize = 100;
     InitWindow (window.x, window.y, text);
+    SetTargetFPS(60);
     while (!WindowShouldClose()) {
         window.x = GetRenderWidth();
         window.y = GetRenderHeight();
@@ -25,5 +26,6 @@ int main (void) {
             );
         EndDrawing();
     }
+    CloseWindow();
     return 0;
 }
