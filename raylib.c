@@ -8,10 +8,11 @@ Vector2 window = { 16*factor, 9*factor };
 
 int main (void) {
     SetConfigFlags (FLAG_WINDOW_RESIZABLE);
+    SetConfigFlags (FLAG_VSYNC_HINT);
+    SetConfigFlags(FLAG_MSAA_4X_HINT);
     const char* text = "Hello World";
     const float fontSize = 100;
     InitWindow (window.x, window.y, text);
-    SetTargetFPS(60);
     while (!WindowShouldClose()) {
         window.x = GetRenderWidth();
         window.y = GetRenderHeight();
