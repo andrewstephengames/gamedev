@@ -1,2 +1,2 @@
 #!/bin/sh
-cc $1 -lraylib -lm && ./a.out
+cc $1 -lraylib -lm -ggdb && ./a.out
